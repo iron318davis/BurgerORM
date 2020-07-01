@@ -30,7 +30,7 @@
         {{#each burger}}
         {{#if devoured}}
         <li class="eaten list-group-item">
-          {{id}}. {{burger_name}}
+          {{id}}.{{burger_name}}
         </li>
         {{/if}}
         {{/each}}
