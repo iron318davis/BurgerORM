@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div class="text-center">
+    <h3>Eat-da-burger</h3>
+    <img class="burger-icon" src="/assets/img/burger.jpg" />
+    <h6>"They're not fake"</h6>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3 class="heading">Uneaten</h3>
+      <ul class="list-group">
+        {{#each burger}}
+        {{#unless devoured}}
+        <li class="menu-item list-group-item">
+          {{id}}. {{burger_name}}
+          <button id="{{id}}" type="button" class="eat btn btn-outline-success">
+            Eat Burger
+          </button>
+        </li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-sm-6">
+      <h3 class="heading">Eaten Burgers</h3>
+      <ul class="list-group">
+        {{#each burger}}
+        {{#if devoured}}
+        <li class="eaten list-group-item">
+          {{id}}.{{burger_name}}
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="text-center">
+    <form class="create-form">
+      <div class="form-group">
+        <textarea placeholder="Add a burger" type="text" id="newBurger" name="name" cols="50"></textarea>
+      </div>
+      <button class="btn btn-success" type="submit">Create Burger</button>
+    </form>
+  </div>
+
+</div>
