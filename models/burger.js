@@ -13,7 +13,8 @@ let burger = {
     });
   },
   updateOne: function (id, cb) {
-    orm.updateOne("burgers", "devoured", true, id, function (res) {
+    let condition = "id=" + id
+    orm.updateOne("burgers", {"devoured": true}, condition, function (res) {
       cb(res);
     });
   }

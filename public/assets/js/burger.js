@@ -2,7 +2,7 @@ $(function () {
     $(".create-form").on("submit", function (event) {
       event.preventDefault();
       let newBurger = { name: $("#newBurger").val().trim() };
-      if (newBurger.name === "") { newBurger.name = "(the burger with no name)" }
+      if (newBurger.name === "") { newBurger.name = "LoCal Empty String Burger" }
   
       $.ajax("/api/add-burger", {
         type: "POST",

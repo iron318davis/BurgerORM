@@ -12,12 +12,12 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/add-burger", function (req, res) {
-  burger.insertOne([req.body.name], function (data) {
+  burger.insertOne(req.body.name, function (data) {
   });
 });
 
 router.put("/api/eat-burger", function (req, res) {
-  burger.updateOne([req.body.id], function (data) {
+  burger.updateOne(req.body.id, function (data) {
   });
 });
 
