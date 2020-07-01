@@ -12,7 +12,7 @@ let orm = {
     });
   },
   insertOne: function(table, cols, vals, cb) {
-    let queryString = `INSERT INTO ?? (??) VALUES ?`;
+    let queryString = `INSERT INTO ?? (??) VALUES (?)`;
 
     connection.query(queryString, [table, cols, vals], function(err, result) {
       if (err) {
