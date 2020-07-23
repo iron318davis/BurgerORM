@@ -25,7 +25,7 @@ The application is live at the following URL: https://burgerormdavis.herokuapp.c
 
 
 ## Screenshot
-![program working](public/assets/img/burger.jpg)
+![program working](public/assets/img/BurgerORM.jpg)
 
 
 ## Additional-Badges
